@@ -26,7 +26,8 @@ jobs:
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          plugin_habits_languages_limit: 0 # ✅ 커밋 습관 내 언어 그래프 제거
+          plugin_habits_sections: facts, charts # ✅ Language activity 제거
+          plugin_habits_languages_limit: 0
           plugin_habits_charts_type: classic
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
@@ -38,11 +39,11 @@ jobs:
           plugin_languages_ignored: html
           plugin_languages_details: percentage
           plugin_languages_colors: |
-            TypeScript: "#9a7aff"
-            JavaScript: "#d0a2ff"
-            CSS: "#b98aff"
-            SCSS: "#e3a7f9"
-            Dockerfile: "#8aa5ff"
+            "TypeScript": "#9a7aff"
+            "JavaScript": "#d0a2ff"
+            "CSS": "#b98aff"
+            "SCSS": "#e3a7f9"
+            "Dockerfile": "#8aa5ff"
 
           # 🎭 리액션
           plugin_reactions: yes
@@ -72,6 +73,13 @@ jobs:
               --color-calendar-graph-day-L3-bg: #d69cd2 !important;
               --color-calendar-graph-day-L4-bg: #b983d0 !important;
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
+            }
+
+            /* 섹션 타이틀 색상 변경 */
+            .section > h2,
+            .field > span.field-name,
+            h2.field {
+              color: #d6b2f0 !important;
             }
 
             /* 커밋 습관 그래프 세로 정렬 */
