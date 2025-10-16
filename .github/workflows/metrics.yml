@@ -33,11 +33,6 @@ jobs:
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
 
-          # 🏆 업적 (Achievements)
-          plugin_achievements: yes
-          plugin_achievements_display: compact
-          plugin_achievements_threshold: B
-
           # 🎨 밝고 미니멀한 테마
           theme: light
           config_order: base.header, habits, languages, wakatime, achievements
