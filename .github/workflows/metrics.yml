@@ -1,9 +1,6 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
 name: Metrics
 on:
-  # Schedule updates (each hour)
   schedule: [{ cron: "0 * * * *" }]
-  # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
   push: { branches: ["master", "main"] }
 
@@ -15,10 +12,8 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # GitHub Token
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # 기본 설정
           user: szeunkk
           template: classic
           base: header, activity
@@ -27,26 +22,31 @@ jobs:
           config_timezone: Asia/Seoul
           config_twemoji: yes
 
-          # 📊 커밋 습관 그래프 (언어 제외)
+          # 커밋 습관
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_languages_limit: 0
 
-          # 🌱 3D 잔디 그래프
+          # 3D 잔디
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
-          # 💬 언어 통계 (Catppuccin Frappe 스타일)
+          # 언어
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 6
           plugin_languages_ignored: html, css
-          plugin_languages_colors: javascript:#ca9ee6,python:#f2cdcd,typescript:#c6a0f6,java:#eebebe,go:#f4b8e4,rust:#babbf1,default:#8caaee
           plugin_languages_details: percentage
           plugin_languages_threshold: 0%
+          plugin_languages_colors: |
+            typescript:#b197fc,  # 좀 더 연보라
+            javascript:#ca9ee6,  # 따뜻한 보라
+            scss:#eebebe,
+            dockerfile:#8caaee,
+            default:#c6a0f6
 
-          # 💖 리액션
+          # 리액션
           plugin_reactions: yes
           plugin_reactions_display: absolute
           plugin_reactions_limit: 200
@@ -54,24 +54,26 @@ jobs:
           plugin_reactions_limit_discussions_comments: 100
           plugin_reactions_limit_issues: 100
 
-          # 🧧 포춘쿠키 (랜덤 문구)
+          # 포춘쿠키
           plugin_fortune: yes
 
-          # 🎨 커스텀 CSS (Catppuccin Frappe + 테두리 제거)
+          # 커스텀 CSS
           extras_css: |
             :root {
               color-scheme: dark;
               background-color: transparent !important;
+
               --color-text-primary: #c6d0f5 !important;
               --color-text-secondary: #a5adce !important;
-              --color-border: transparent !important; /* 테두리 제거 */
+              --color-border: transparent !important;
+
               --color-primary: #ca9ee6 !important;
-              --color-secondary: #eebebe !important;
+              --color-secondary: #babbf1 !important;
               --color-tertiary: #f2cdcd !important;
 
-              /* 잔디 색상 */
+              /* 잔디 */
               --color-calendar-graph-day-bg: #303446 !important;
-              --color-calendar-graph-day-border: transparent !important; /* 잔디 테두리 제거 */
+              --color-calendar-graph-day-border: transparent !important;
               --color-calendar-graph-day-L1-bg: #babbf1 !important;
               --color-calendar-graph-day-L2-bg: #ca9ee6 !important;
               --color-calendar-graph-day-L3-bg: #f2cdcd !important;
@@ -79,48 +81,36 @@ jobs:
               --color-calendar-graph-day-L5-bg: #eebebe !important;
             }
 
-            /* 🪄 커밋 습관 그래프 */
+            /* 커밋 습관 그래프: 초록 대신 보라색 계열 */
             .plugin-habits .chart-bar rect {
-              fill: var(--color-primary) !important;
-              opacity: 0.95 !important;
-              stroke: none !important; /* 테두리 제거 */
+              fill: #b197fc !important; /* 연보라색 */
+              opacity: 0.9 !important;
+              stroke: none !important;
             }
 
-            /* 🪶 그래프 제목 */
+            /* 그래프 제목 */
             .plugin-habits h3 {
-              color: var(--color-tertiary) !important;
+              color: var(--color-primary) !important;
               font-weight: 600 !important;
               margin-bottom: 0.6rem !important;
             }
 
-            /* 🌈 언어 그래프 */
+            /* 언어 그래프 */
             .plugin-languages .progress {
-              background-color: #51576d !important;
-              border: none !important; /* 테두리 제거 */
+              background-color: #4c4f69 !important;
+              border: none !important;
             }
             .plugin-languages .progress > span {
-              background-color: var(--color-primary) !important;
               border: none !important;
             }
 
-            /* 💬 포춘쿠키 폰트 조정 */
+            /* 포춘쿠키 스타일 */
             .plugin-fortune {
               color: var(--color-secondary) !important;
               font-style: italic;
               opacity: 0.9 !important;
             }
 
-            /* 🪞 배경 투명 */
             svg {
               background: transparent !important;
             }
-
-            /* 필요 시 이모지 교체 (예: ❤️→💜) — 선택 사항
-            .plugin-reactions span:has(> svg[aria-label="heart"])::before {
-              content: "💜";
-              font-size: 1.1em;
-            }
-            .plugin-reactions svg[aria-label="heart"] {
-              display: none !important;
-            } 
-            */
