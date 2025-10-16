@@ -11,7 +11,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: header, activity, community, repositories, metadata
+          base: "" # 헤더, 활동, 커뮤니티 제거
 
           # 🕑 한국 시간대
           config_timezone: Asia/Seoul
@@ -28,11 +28,7 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css
 
-          # ⏱️ WakaTime 통계
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
-          plugin_wakatime_sections: time, languages, editors, projects
-
-          # 🎨 밝고 미니멀한 테마
-          theme: light
-          config_order: base.header, habits, languages, wakatime, achievements
+          # 🎨 밝고 미니멀한 테마 (여기에 추가!)
+          theme: catppuccin-latte
+          config_display: large
+          config_order: habits, languages

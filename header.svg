@@ -6,23 +6,24 @@
           height: 100vh;
           display: grid;
           place-items: center;
+          background: #eff1f5; /* latte base background */
         }
 
         .text {
           width: 9ch;
-          animation: typing 1.5s steps(9),
-            blink 0.5s step-end infinite alternate;
+          animation: typing 1.8s steps(9),
+            blink 0.6s step-end infinite alternate;
           white-space: nowrap;
           overflow: hidden;
-          border-right: 3px solid;
+          border-right: 3px solid #8839ef; /* Mauve accent */
           font-family: monospace;
           font-size: 4em;
           background: linear-gradient(
             90deg,
-            rgba(0, 241, 220, 1) 0%,
-            rgba(86, 115, 241, 1) 44%,
-            rgba(103, 68, 241, 1) 54%,
-            rgba(254, 0, 255, 1) 100%
+            #dc8a78 0%,
+            /* Rosewater */ #dd7878 25%,
+            /* Flamingo */ #1e66f5 55%,
+            /* Blue */ #8839ef 100% /* Mauve */
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -40,7 +41,7 @@
             border-color: transparent;
           }
           50% {
-            border-color: rgba(254, 0, 255, 1);
+            border-color: #8839ef; /* Mauve blink color */
           }
         }
       </style>
