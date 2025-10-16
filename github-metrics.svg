@@ -3,7 +3,8 @@
         <style/>
     </defs>
     <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}svg.large .largeable{width:474px}svg.large .largeable&gt;.row{width:100%}svg.large .column.largeable,svg.large .row.largeable{display:inline-flex}svg.large .largeable-column-fields{display:flex;flex-wrap:wrap}svg.large .largeable-column-fields&gt;.field{width:230px}svg.large .chart.largeable{width:458px}h2,h3{margin:8px 0 2px;padding:0;color:#0366d6;font-weight:400}h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}.h-details{margin:0 4px;padding-top:4px;font-size:.8rem}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex}.horizontal .field,.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}.horizontal{justify-content:space-around}#metrics-end,.fill-width{width:100%}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,35,.04);outline-offset:-1px}svg.bar{margin:4px 0}.field.language{margin:0 8px;flex-grow:0}.field.language.details,.field.language.details small{display:flex;justify-content:space-between}.field.language.details small{color:#666;text-align:right}.field.language.details small&gt;*,.field.language.details&gt;*{flex:1 1 0}.field.language.details small&gt;:not(:last-child){margin-right:6px}.habits .facts{margin:0;list-style-type:none;padding-left:37px}.categories,.category{display:flex;align-items:center}.categories{justify-content:space-around;margin-top:4px}.category{flex-direction:column;flex:1 1 0}.gauge{stroke-linecap:round;fill:none}.gauge.info{color:#58a6ff}.gauge-arc,.gauge-base{stroke:currentColor;stroke-width:10}.gauge-base{stroke-opacity:.2}.gauge-arc{fill:none;stroke-dashoffset:0;animation-delay:250ms;animation:animation-gauge 1s ease forwards}.chart{padding:0 8px}.chart-bars{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin:8px 0 4px;flex-grow:1;min-height:70px}.chart-bars .entry{flex-grow:1;display:flex;flex-direction:column;align-items:center;font-size:10px;color:#666}.chart-bars .entry .value{font-size:6px}.chart-bars .bar{width:7px;background-color:var(--color-calendar-graph-day-bg);border:1px solid var(--color-calendar-graph-day-border);border-radius:5px}.chart-bars.horizontal{flex-direction:column;height:100%}.chart-bars.horizontal .entry{align-items:center;flex-direction:row;width:100%;min-height:1rem}.activity .field,.chart-bars.horizontal .entry .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chart-bars.horizontal .entry .name{flex-shrink:0;text-align:right;width:34%}.chart-bars.horizontal .bar{height:7px;width:auto;margin:0 6px}.activity{margin-bottom:12px}.activity .field{width:100%;max-width:450px;margin-bottom:0}.activity .code,code,span.code{background-color:#7777771f;border-radius:6px;color:#777;padding:1px 5px;font-size:80%;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.activity .code,span.code{margin:0 4px -3px}.activity .details{padding-left:38px;display:flex;flex-direction:column;font-size:13px;color:#666}svg.large .activity .field{max-width:900px}svg.calendar{margin-left:13px;margin-top:4px}code{display:inline-block}.twemoji{height:1em;width:1em;margin-bottom:-.125em}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}</style>
-    <style>:root {
+    <style>
+        :root {
  font-family:
  'JetBrainsMono Nerd Font',
  'FiraCode Nerd Font',
@@ -23,24 +24,52 @@
  --color-calendar-graph-day-L5-bg: #a46ebd !important;
 }
 
-/* 섹션 타이틀 색상 변경 */
+/*
+        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <circle fill="#AA8ED6" cx="18" cy="18" r="18"/>
+        </svg>
+        섹션 타이틀 색상 */
 .section &gt; h2,
 .field &gt; span.field-name,
 h2.field {
  color: #d6b2f0 !important;
 }
 
-/* 커밋 습관 그래프 세로 정렬 */
+/*
+        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <path fill="#AA8ED6" d="M36 32c0 2.209-1.791 4-4 4H4c-2.209 0-4-1.791-4-4V4c0-2.209 1.791-4 4-4h28c2.209 0 4 1.791 4 4v28z"/>
+        </svg>
+        커밋 습관 그래프 세로 정렬 */
 .plugin-habits .charts {
  display: flex !important;
  flex-direction: column !important;
  gap: 1.6rem !important;
 }
 
-/* 그래프 테두리 제거 */
+/*
+        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <circle fill="#FDCB58" cx="18" cy="18" r="18"/>
+        </svg>
+        그래프 테두리 제거 */
 rect, path, line {
  stroke: none !important;
-}</style>
+}
+
+/*
+        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+            <path fill="#78B159" d="M26.093 4.612c-.498.498-.629.839-.728 1.029-.66 1.266-1.455 1.676-2.78.351-.13-.13-4.087-4.267-4.741-5.017-.427-.49-1.081-.64-1.584-.262-.38.286-4.035 3.273-5.035 4.507-.774.955-.8 2.134-.079 2.856.326.326.727.449 1.151.578.552.169 1.763.068 2.47.775 1.133 1.133.54 2.924-.917 4.421-1.497 1.457-3.288 2.05-4.421.917-.708-.708-.606-1.918-.775-2.47-.129-.424-.252-.824-.578-1.151-.721-.721-1.9-.694-2.856.079-1.235 1-4.221 4.655-4.507 5.035-.379.503-.228 1.156.262 1.584.75.654 4.887 4.611 5.017 4.741 1.324 1.324.915 2.12-.351 2.78-.19.099-.53.229-1.029.728-1.462 1.462-1.462 3.833 0 5.295 1.462 1.462 3.833 1.462 5.295 0 .498-.498.629-.839.728-1.029.66-1.266 1.455-1.676 2.78-.351.13.13 4.087 4.267 4.741 5.017.427.49 1.081.64 1.584.262.38-.286 4.035-3.273 5.035-4.507.774-.955.8-2.134.079-2.856-.326-.326-.727-.449-1.151-.578-.552-.169-1.763-.068-2.47-.775-1.133-1.133-.54-2.924.917-4.421 1.497-1.457 3.288-2.05 4.421-.917.708.708.606 1.918.775 2.47.129.424.252.824.578 1.151.721.721 1.9.694 2.856-.079 1.235-1 4.221-4.655 4.507-5.035.379-.503.228-1.156-.262-1.584-.75-.654-4.887-4.611-5.017-4.741-1.324-1.324-.915-2.12.351-2.78.19-.099.53-.229 1.029-.728 1.462-1.462 1.462-3.833 0-5.295-1.462-1.463-3.833-1.463-5.295 0z"/>
+        </svg>
+        커밋습관의 Language activity 숨기기 */
+.plugin-habits svg + div,
+.plugin-habits .languages,
+.plugin-habits .field:has(span:contains("Language activity")) {
+ display: none !important;
+ visibility: hidden !important;
+ height: 0 !important;
+ margin: 0 !important;
+ padding: 0 !important;
+}
+    </style>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
             <section class="habits">
@@ -1523,7 +1552,7 @@ rect, path, line {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #BAC200">Your fortune: Average Luck</b>
+                            <b style="color: #FD4D32">Your fortune: Excellent Luck</b>
                         </div>
                     </section>
                 </div>
