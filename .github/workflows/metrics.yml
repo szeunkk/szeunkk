@@ -1,23 +1,24 @@
 name: Metrics
 on:
-schedule: [{cron: "0 */12 * * *"}] # 12시간마다 자동 갱신
-workflow_dispatch:
-push: {branches: ["main", "master"]}
+  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
+  workflow_dispatch:
+  push: { branches: ["main", "master"] }
 
 jobs:
-github-metrics:
-runs-on: ubuntu-latest
-permissions:
-contents: write
-steps: - uses: lowlighter/metrics@latest
-with:
-token: ${{ secrets.METRICS_TOKEN }}
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
 
           # 기본 설정
           user: szeunkk
           template: classic
-          base: ""
-          base_hireable: yes
+          base: header, activity
+          base_hireable: no
           base_skip: yes
           config_timezone: Asia/Seoul
           config_twemoji: yes
