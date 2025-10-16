@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="871" class="large">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="891" class="large">
     <defs>
         <style/>
     </defs>
@@ -13,9 +13,9 @@
  'Menlo',
  monospace !important;
  background-color: transparent !important;
- --color-text-primary: #4c4f69 !important;
- --color-text-secondary: #6c6f85 !important;
- --color-calendar-graph-day-bg: #f9f5f2 !important;
+ --color-text-primary: #f4dce3 !important;
+ --color-text-secondary: #b983d0 !important;
+ --color-calendar-graph-day-bg: #1e1e2e !important;
  --color-calendar-graph-day-L1-bg: #f4dce3 !important;
  --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
  --color-calendar-graph-day-L3-bg: #d69cd2 !important;
@@ -23,29 +23,14 @@
  --color-calendar-graph-day-L5-bg: #a46ebd !important;
 }
 
-/* 언어 그래프 커스텀 색상 */
-.plugin-languages .progress &gt; span[style*="typescript"] {
- background-color: #b185db !important;
-}
-.plugin-languages .progress &gt; span[style*="javascript"] {
- background-color: #caa0e5 !important;
-}
-.plugin-languages .progress &gt; span[style*="python"] {
- background-color: #d8b7eb !important;
-}
-.plugin-languages .progress &gt; span[style*="go"] {
- background-color: #e6b7d2 !important;
-}
-.plugin-languages .progress &gt; span[style*="rust"] {
- background-color: #b983d0 !important;
-}
-
+/* 커밋 습관 그래프 세로 정렬 */
 .plugin-habits .charts {
  display: flex !important;
  flex-direction: column !important;
  gap: 1.6rem !important;
 }
 
+/* 그래프 테두리 제거 */
 rect, path, line {
  stroke: none !important;
 }</style>
@@ -1329,22 +1314,47 @@ rect, path, line {
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="807.9265689242308" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="807.9265689242308" y="0" width="56.46992048073013" height="8" fill="#c6538c"/>
-                    <rect mask="url(#languages-bar)" x="864.3964894049609" y="0" width="55.283965119956626" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="919.6804545249175" y="0" width="0.31954547508245607" height="8" fill="#384d54"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="731.423378190445" height="8" fill="&quot;#9a7aff&quot;&#10;javascript"/>
+                    <rect mask="url(#languages-bar)" x="731.423378190445" y="0" width="87.11551047120419" height="8" fill="#663399"/>
+                    <rect mask="url(#languages-bar)" x="818.5388886616491" y="0" width="51.12274010143979" height="8" fill="#c6538c"/>
+                    <rect mask="url(#languages-bar)" x="869.661628763089" y="0" width="50.049083769633505" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="919.7107125327224" y="0" width="0.2892874672774869" height="8" fill="#384d54"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#3178c6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="&quot;#9a7aff&quot;&#10;javascript" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 TypeScript
                             </div>
                             <small>
-                                <div>87.82%</div>
+                                <div>79.5%</div>
+                            </small>
+                        </div>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#384d54" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                Dockerfile
+                            </div>
+                            <small>
+                                <div>0.03%</div>
+                            </small>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="field language details">
+                            <div class="field">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                    <path fill="#663399" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                </svg>
+                                CSS
+                            </div>
+                            <small>
+                                <div>9.47%</div>
                             </small>
                         </div>
                     </section>
@@ -1357,7 +1367,7 @@ rect, path, line {
                                 SCSS
                             </div>
                             <small>
-                                <div>6.14%</div>
+                                <div>5.56%</div>
                             </small>
                         </div>
                     </section>
@@ -1370,20 +1380,7 @@ rect, path, line {
                                 JavaScript
                             </div>
                             <small>
-                                <div>6.01%</div>
-                            </small>
-                        </div>
-                    </section>
-                    <section>
-                        <div class="field language details">
-                            <div class="field">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#384d54" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
-                                </svg>
-                                Dockerfile
-                            </div>
-                            <small>
-                                <div>0.03%</div>
+                                <div>5.44%</div>
                             </small>
                         </div>
                     </section>
@@ -1519,7 +1516,7 @@ rect, path, line {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #00CBB0">Your fortune: ｷﾀ━━━━━━(ﾟ∀ﾟ)━━━━━━ !!!!</b>
+                            <b style="color: #7FEC11">Your fortune: Bad Luck</b>
                         </div>
                     </section>
                 </div>
