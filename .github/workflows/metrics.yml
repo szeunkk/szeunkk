@@ -21,7 +21,7 @@ jobs:
           base_hireable: no
           base_skip: yes
           config_timezone: Asia/Seoul
-          config_twemoji: yes
+          config_twemoji: no
           config_display: large
           config_order: languages, habits, isocalendar, reactions, fortune
 
