@@ -74,11 +74,24 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            /* 🟣 섹션 타이틀 색상 */
+            /* 💜 섹션 타이틀 색상 (톤다운 보라) */
             .section > h2,
+            h2.field,
+            .field > span.field-name {
+              color: #9b5dff !important;
+            }
+
+            /* 💜 그래프 내 소제목 및 필드 이름 */
+            .field-name,
             .field > span.field-name,
-            h2.field {
-              color: #d6b2f0 !important;
+            .field > span.field-name::after,
+            .chart .title,
+            text.chart-title,
+            .plugin-languages h3,
+            .plugin-habits h3,
+            .plugin-reactions h3 {
+              color: #9b5dff !important;
+              fill: #9b5dff !important;
             }
 
             /* 🟪 커밋 습관 그래프 세로 정렬 */
