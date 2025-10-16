@@ -38,11 +38,11 @@ jobs:
 
           # 🎨 언어별 색상 (직접 지정)
           plugin_languages_colors: |
-            TypeScript: "#a371f7"
-            JavaScript: "#e6b7d2"
-            CSS: "#63b3ed"
-            SCSS: "#f687b3"
-            Dockerfile: "#a46ebd"
+            "TypeScript": "#a371f7"
+            "JavaScript": "#e6b7d2"
+            "CSS": "#dd7878"
+            "SCSS": "#f687b3"
+            "Dockerfile": "#a46ebd"
 
           # 💬 리액션
           plugin_reactions: yes
@@ -85,7 +85,7 @@ jobs:
             .section > h2,
             h2.field,
             .field > span.field-name {
-              color: #9b5dff !important;
+              color: #7287fd !important;
             }
 
             /* 💜 그래프 소제목 (Commit activity, Most used languages 등) */
@@ -95,18 +95,19 @@ jobs:
             .chart h3,
             .column.chart.largeable h3,
             .plugin-isocalendar h3,
-            .plugin-isocalendar h3,
-            .field h3 {
-              color: #9b5dff !important;
-              fill: #9b5dff !important;
+            .plugin-isocalendar h3.field,
+            .section > h3,
+            h3.field {
+              color: #4c4f69 !important;
+              fill: #4c4f69 !important;
             }
 
             /* 💜 기타 강조 텍스트 */
             .field-name,
             .chart .title,
             text.chart-title {
-              color: #9b5dff !important;
-              fill: #9b5dff !important;
+              color: #4c4f69 !important;
+              fill: #4c4f69 !important;
             }
 
             /* 🟪 커밋 습관 그래프 세로 정렬 */
