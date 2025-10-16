@@ -1,10 +1,10 @@
 ![header](https://raw.githubusercontent.com/szeunkk/szeunkk/main/header.svg)
 
-### ꫀꪊꪀ𝘬ꪗꪮꪊꪀᧁ 𝘬𝓲ꪑ
+## ꫀꪊꪀ𝘬ꪗꪮꪊꪀᧁ 𝘬𝓲ꪑ
 
 안녕하세요. 김은경입니다. 👩🏻‍💻
 
-#### 🌱 개발 활동 요약
+### 🌱 개발 활동 요약
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/szeunkk/szeunkk/output/pacman-contribution-graph-dark.svg">
