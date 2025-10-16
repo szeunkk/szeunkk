@@ -1,9 +1,8 @@
-# Visit https://github.com/lowlighter/metrics#-documentation for full reference
 name: Metrics
 on:
-  schedule: [{ cron: "0 * * * *" }]
+  schedule: [{ cron: "0 */12 * * *" }]
   workflow_dispatch:
-  push: { branches: ["master", "main"] }
+  push: { branches: ["main", "master"] }
 
 jobs:
   github-metrics:
@@ -15,58 +14,47 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # 기본 설정
           user: szeunkk
           template: classic
-          base: header, activity
-          base_hireable: yes
-          base_skip: yes
+
+          # 1) 프로필 전부 숨김
+          base: "" # ⬅️ 헤더/프로필 제거
           config_timezone: Asia/Seoul
           config_twemoji: yes
+          config_display: large
+          config_order: habits, isocalendar, languages, reactions, fortune
 
-          # 🧩 fortune (랜덤 문장)
-          plugin_fortune: yes
-
-          # 🗓️ 3D 잔디
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-          # 🪄 언어 통계
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
-          plugin_languages_categories: markup, programming
-          plugin_languages_limit: 5
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0%
-
-          # 🎨 언어별 색상 (직접 지정)
-          plugin_languages_colors: |
-            TypeScript: "#a371f7"
-            JavaScript: "#b87cff"
-            CSS: "#63b3ed"
-            SCSS: "#f687b3"
-            Dockerfile: "#0db7ed"
-
-          # 💬 리액션
-          plugin_reactions: yes
-          plugin_reactions_display: absolute
-          plugin_reactions_limit: 200
-          plugin_reactions_limit_discussions: 100
-          plugin_reactions_limit_discussions_comments: 100
-          plugin_reactions_limit_issues: 100
-
-          # 🕒 커밋 습관 (Language activity 제거)
+          # 커밋 습관 (Language activity 제거 유지)
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
-          plugin_habits_languages_limit: 0 # ← "Language activity" 섹션 생성 방지
+          plugin_habits_languages_limit: 0
 
-          # 🎨 커스텀 스타일
+          # 3D 잔디
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # 언어
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_limit: 6
+          plugin_languages_ignored: html
+          plugin_languages_details: percentage
+          plugin_languages_colors: |
+            "TypeScript": "#9a7aff"
+            "JavaScript": "#d0a2ff"
+            "CSS": "#b98aff"
+            "SCSS": "#e3a7f9"
+            "Dockerfile": "#8aa5ff"
+
+          # 리액션 / 포춘
+          plugin_reactions: yes
+          plugin_reactions_limit: 200
+          plugin_reactions_display: absolute
+          plugin_fortune: yes
+
+          # 2) Most used languages, 3) Commits per day 제목 색상 보라로
           extras_css: |
             :root {
               font-family:
@@ -78,6 +66,8 @@ jobs:
                 'Menlo',
                 monospace !important;
               background-color: transparent !important;
+
+              /* (참고) 기존 색 변수 유지 가능 */
               --color-text-primary: #f4dce3 !important;
               --color-text-secondary: #b983d0 !important;
               --color-calendar-graph-day-bg: #1e1e2e !important;
@@ -88,51 +78,31 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            /* 💜 섹션 타이틀 색상 */
+            /* 섹션 제목(큰 h2) 보라 */
             .section > h2,
             h2.field,
             .field > span.field-name {
               color: #9b5dff !important;
             }
 
-            /* 💜 그래프 소제목 (Commit activity, Most used languages 등) */
-            .plugin-habits h3,
-            .plugin-languages h3,
-            .plugin-reactions h3,
-            .chart h3,
-            .column.chart.largeable h3,
-            .plugin-isocalendar h3 {
+            /* 2) 6 Languages 섹션의 소제목: Most used languages */
+            .plugin-languages h3.field {
               color: #9b5dff !important;
-              fill: #9b5dff !important;
             }
 
-            /* 💜 기타 강조 텍스트 */
-            .field-name,
-            .chart .title,
-            text.chart-title {
+            /* 3) 3D 잔디(Contributions calendar) 내부 소제목: Commits streaks / Commits per day */
+            .plugin-isocalendar h3.field {
               color: #9b5dff !important;
-              fill: #9b5dff !important;
             }
 
-            /* 🟪 커밋 습관 그래프 세로 정렬 */
-            .plugin-habits .charts {
-              display: flex !important;
-              flex-direction: column !important;
-              gap: 1.6rem !important;
-            }
-
-            /* 🟡 그래프 테두리 제거 */
+            /* 그래프 테두리 제거(유지) */
             rect, path, line {
               stroke: none !important;
             }
 
-            /* 🧩 혹시 남은 Language activity 섹션도 강제 숨김 */
-            .plugin-habits section.column.chart:has(h3:contains("Language activity")),
-            .plugin-habits h3:contains("Language activity"),
-            .plugin-habits div:has(> h3:contains("Language activity")) {
-              display: none !important;
-              visibility: hidden !important;
-              height: 0 !important;
-              margin: 0 !important;
-              padding: 0 !important;
+            /* 커밋 습관 그래프 세로 정렬(유지, 선택) */
+            .plugin-habits .charts {
+              display: flex !important;
+              flex-direction: column !important;
+              gap: 1.6rem !important;
             }
