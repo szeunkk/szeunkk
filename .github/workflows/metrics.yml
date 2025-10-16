@@ -37,7 +37,7 @@ jobs:
           plugin_languages_details: percentage
 
           # 🎨 언어별 색상 (직접 지정)
-          plugin_languages_colors: 0:#e78284,1:#ea999c,2:#ef9f76,3:#e5c890,4:#a6d189,5:#81c8be
+          plugin_languages_colors: 0:#ca9ee6,1:#ea999c,2:#e5c890,3:#a6d189,4:#81c8be,5:#8caaee
 
           # 💬 리액션
           plugin_reactions: yes
