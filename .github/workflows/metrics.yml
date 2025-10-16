@@ -144,3 +144,23 @@ jobs:
               margin: 0 !important;
               padding: 0 !important;
             }
+
+            /* 🌅 아침 (06시~11시) */
+            .chart-bars .entry:nth-child(n+7):nth-child(-n+12) .bar {
+              fill: #e5c890 !important;
+            }
+
+            /* 🌞 점심 (12시~17시) */
+            .chart-bars .entry:nth-child(n+13):nth-child(-n+18) .bar {
+              fill: #a6d189 !important;
+            }
+
+            /* 🌙 저녁 (18시~23시) */
+            .chart-bars .entry:nth-child(n+19):nth-child(-n+24) .bar {
+              fill: #8caaee !important;
+            }
+
+            /* 기본 (00시~05시) — 살짝 흐린 보라톤 */
+            .chart-bars .entry:nth-child(-n+6) .bar {
+              fill: #c6d0f5 !important;
+            }
