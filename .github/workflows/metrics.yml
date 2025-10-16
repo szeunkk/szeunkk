@@ -14,10 +14,9 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
-          # ⚙️ 기본 설정
           user: szeunkk
           template: classic
-          base: "" # ✅ 프로필 완전 제거
+          base: "" # 프로필 제거
           config_timezone: Asia/Seoul
           config_twemoji: yes
           config_display: large
@@ -27,7 +26,7 @@ jobs:
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          plugin_habits_languages_limit: 0
+          plugin_habits_languages_limit: 0 # ✅ 커밋 습관 내 언어 그래프 제거
           plugin_habits_charts_type: classic
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
@@ -36,9 +35,14 @@ jobs:
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 6
-          plugin_languages_ignored: html, css
-          plugin_languages_colors: "" # ✅ GitHub 팔레트 비활성화
+          plugin_languages_ignored: html
           plugin_languages_details: percentage
+          plugin_languages_colors: |
+            TypeScript: "#9a7aff"
+            JavaScript: "#d0a2ff"
+            CSS: "#b98aff"
+            SCSS: "#e3a7f9"
+            Dockerfile: "#8aa5ff"
 
           # 🎭 리액션
           plugin_reactions: yes
@@ -60,9 +64,9 @@ jobs:
                 'Menlo',
                 monospace !important;
               background-color: transparent !important;
-              --color-text-primary: #4c4f69 !important;
-              --color-text-secondary: #6c6f85 !important;
-              --color-calendar-graph-day-bg: #f9f5f2 !important;
+              --color-text-primary: #f4dce3 !important;
+              --color-text-secondary: #b983d0 !important;
+              --color-calendar-graph-day-bg: #1e1e2e !important;
               --color-calendar-graph-day-L1-bg: #f4dce3 !important;
               --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
               --color-calendar-graph-day-L3-bg: #d69cd2 !important;
@@ -70,29 +74,14 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            /* 언어 그래프 커스텀 색상 */
-            .plugin-languages .progress > span[style*="typescript"] {
-              background-color: #b185db !important;
-            }
-            .plugin-languages .progress > span[style*="javascript"] {
-              background-color: #caa0e5 !important;
-            }
-            .plugin-languages .progress > span[style*="python"] {
-              background-color: #d8b7eb !important;
-            }
-            .plugin-languages .progress > span[style*="go"] {
-              background-color: #e6b7d2 !important;
-            }
-            .plugin-languages .progress > span[style*="rust"] {
-              background-color: #b983d0 !important;
-            }
-
+            /* 커밋 습관 그래프 세로 정렬 */
             .plugin-habits .charts {
               display: flex !important;
               flex-direction: column !important;
               gap: 1.6rem !important;
             }
 
+            /* 그래프 테두리 제거 */
             rect, path, line {
               stroke: none !important;
             }
