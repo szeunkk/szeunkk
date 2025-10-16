@@ -2,21 +2,22 @@
     <defs>
         <style/>
     </defs>
-    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}h1,h2,h3{margin:8px 0 2px;padding:0;color:#0366d6}h1{font-size:20px;font-weight:700}h2,h3{font-weight:400}h1 svg,h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}.h-details{margin:0 4px;padding-top:4px;font-size:.8rem}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex}.horizontal .field,.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}.horizontal{justify-content:space-around}#metrics-end,.fill-width{width:100%}.margin-bottom{margin-bottom:16px}.avatar{border-radius:50%;margin:0 6px}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,35,.04);outline-offset:-1px}svg.bar{margin:4px 0}.field.language{margin:0 8px;flex-grow:0}.field.language.details,.field.language.details small{display:flex;justify-content:space-between}.field.language.details small{color:#666;text-align:right}.field.language.details small&gt;*,.field.language.details&gt;*{flex:1 1 0}.field.language.details small&gt;:not(:last-child){margin-right:6px}.habits .facts{margin:0;list-style-type:none;padding-left:37px}.categories,.category{display:flex;align-items:center}.categories{justify-content:space-around;margin-top:4px}.category{flex-direction:column;flex:1 1 0}.gauge{stroke-linecap:round;fill:none}.gauge.info{color:#58a6ff}.gauge-arc,.gauge-base{stroke:currentColor;stroke-width:10}.gauge-base{stroke-opacity:.2}.gauge-arc{fill:none;stroke-dashoffset:0;animation-delay:250ms;animation:animation-gauge 1s ease forwards}.chart{padding:0 8px}.chart-bars{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin:8px 0 4px;flex-grow:1;min-height:70px}.chart-bars .entry{flex-grow:1;display:flex;flex-direction:column;align-items:center;font-size:10px;color:#666}.chart-bars .entry .value{font-size:6px}.chart-bars .bar{width:7px;background-color:var(--color-calendar-graph-day-bg);border:1px solid var(--color-calendar-graph-day-border);border-radius:5px}.chart-bars.horizontal{flex-direction:column;height:100%}.chart-bars.horizontal .entry{align-items:center;flex-direction:row;width:100%;min-height:1rem}.activity .field,.chart-bars.horizontal .entry .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chart-bars.horizontal .entry .name{flex-shrink:0;text-align:right;width:34%}.chart-bars.horizontal .bar{height:7px;width:auto;margin:0 6px}.activity{margin-bottom:12px}.activity .field{width:100%;max-width:450px;margin-bottom:0}.activity .field .content{flex-grow:1;text-overflow:ellipsis;overflow:hidden}.activity .issue{display:inline;color:#58a6ff}.activity .code,code,span.code{background-color:#7777771f;border-radius:6px;color:#777;padding:1px 5px;font-size:80%;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.activity .code,span.code{margin:0 4px -3px}.activity .details{padding-left:38px;display:flex;flex-direction:column;font-size:13px;color:#666}svg.calendar{margin-left:13px;margin-top:4px}code{display:inline-block}.twemoji{height:1em;width:1em;margin-bottom:-.125em}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}</style>
-    <style>
-        :root {
+    <style>@keyframes animation-gauge{0%{stroke-dasharray:0 329}}@keyframes animation-rainbow{0%,to{color:#7f00ff;fill:#7f00ff}14%{color:#a933ff;fill:#a933ff}29%{color:#007fff;fill:#007fff}43%{color:#00ff7f;fill:#00ff7f}57%{color:#ff0;fill:#ff0}71%{color:#ff7f00;fill:#ff7f00}86%{color:red;fill:red}}svg{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:14px;color:#777}h1,h2,h3{margin:8px 0 2px;padding:0;color:#0366d6}h1{font-size:20px;font-weight:700}h2,h3{font-weight:400}h1 svg,h2 svg,h3 svg{fill:currentColor}h2{font-size:16px}h3{font-size:14px}.h-details{margin:0 4px;padding-top:4px;font-size:.8rem}section&gt;.field{margin-left:5px;margin-right:5px}.field{display:flex;align-items:center;margin-bottom:2px;white-space:nowrap}.field.wrap,.row{flex-wrap:wrap}.field svg{margin:0 8px;fill:#959da5;flex-shrink:0}.row{display:flex}.horizontal .field,.row section{flex:1 1 0}.column{display:flex;flex-direction:column;align-items:center}.horizontal{justify-content:space-around}#metrics-end,.fill-width{width:100%}.margin-bottom{margin-bottom:16px}.avatar{border-radius:50%;margin:0 6px}.calendar.field{margin:4px 0 4px 7px}.calendar .day{outline:1px solid rgba(27,31,35,.04);outline-offset:-1px}svg.bar{margin:4px 0}.field.language{margin:0 8px;flex-grow:0}.field.language.details,.field.language.details small{display:flex;justify-content:space-between}.field.language.details small{color:#666;text-align:right}.field.language.details small&gt;*,.field.language.details&gt;*{flex:1 1 0}.field.language.details small&gt;:not(:last-child){margin-right:6px}.habits .facts{margin:0;list-style-type:none;padding-left:37px}.categories,.category{display:flex;align-items:center}.categories{justify-content:space-around;margin-top:4px}.category{flex-direction:column;flex:1 1 0}.gauge{stroke-linecap:round;fill:none}.gauge.info{color:#58a6ff}.gauge-arc,.gauge-base{stroke:currentColor;stroke-width:10}.gauge-base{stroke-opacity:.2}.gauge-arc{fill:none;stroke-dashoffset:0;animation-delay:250ms;animation:animation-gauge 1s ease forwards}.chart{padding:0 8px}.chart-bars{display:flex;justify-content:space-between;align-items:flex-end;width:100%;margin:8px 0 4px;flex-grow:1;min-height:70px}.chart-bars .entry{flex-grow:1;display:flex;flex-direction:column;align-items:center;font-size:10px;color:#666}.chart-bars .entry .value{font-size:6px}.chart-bars .bar{width:7px;background-color:var(--color-calendar-graph-day-bg);border:1px solid var(--color-calendar-graph-day-border);border-radius:5px}.chart-bars.horizontal{flex-direction:column;height:100%}.chart-bars.horizontal .entry{align-items:center;flex-direction:row;width:100%;min-height:1rem}.activity .field,.chart-bars.horizontal .entry .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chart-bars.horizontal .entry .name{flex-shrink:0;text-align:right;width:34%}.chart-bars.horizontal .bar{height:7px;width:auto;margin:0 6px}.activity{margin-bottom:12px}.activity .field{width:100%;max-width:450px;margin-bottom:0}.activity .issue{display:inline;color:#58a6ff}.activity .code,code,span.code{background-color:#7777771f;border-radius:6px;color:#777;padding:1px 5px;font-size:80%;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace}.activity .code,span.code{margin:0 4px -3px}.activity .details{padding-left:38px;display:flex;flex-direction:column;font-size:13px;color:#666}svg.calendar{margin-left:13px;margin-top:4px}code{display:inline-block}.twemoji{height:1em;width:1em;margin-bottom:-.125em}:root{--color-calendar-graph-day-bg:#ebedf0;--color-calendar-graph-day-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-bg:#9be9a8;--color-calendar-graph-day-L2-bg:#40c463;--color-calendar-graph-day-L3-bg:#30a14e;--color-calendar-graph-day-L4-bg:#216e39;--color-calendar-halloween-graph-day-L1-bg:#ffee4a;--color-calendar-halloween-graph-day-L2-bg:#ffc501;--color-calendar-halloween-graph-day-L3-bg:#fe9600;--color-calendar-halloween-graph-day-L4-bg:#03001c;--color-calendar-winter-graph-day-L1-bg:#0a3069;--color-calendar-winter-graph-day-L2-bg:#0969da;--color-calendar-winter-graph-day-L3-bg:#54aeff;--color-calendar-winter-graph-day-L4-bg:#b6e3ff;--color-calendar-graph-day-L4-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L3-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L2-border:rgba(27,31,35,0.06);--color-calendar-graph-day-L1-border:rgba(27,31,35,0.06)}</style>
+    <style>:root {
  color-scheme: dark;
  background-color: transparent !important;
+
  --color-text-primary: #c6d0f5 !important;
  --color-text-secondary: #a5adce !important;
- --color-border: transparent !important; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 테두리 제거 */
+ --color-border: transparent !important;
+
  --color-primary: #ca9ee6 !important;
- --color-secondary: #eebebe !important;
+ --color-secondary: #babbf1 !important;
  --color-tertiary: #f2cdcd !important;
 
- /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 잔디 색상 */
+ /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 잔디 */
  --color-calendar-graph-day-bg: #303446 !important;
- --color-calendar-graph-day-border: transparent !important; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 잔디 테두리 제거 */
+ --color-calendar-graph-day-border: transparent !important;
  --color-calendar-graph-day-L1-bg: #babbf1 !important;
  --color-calendar-graph-day-L2-bg: #ca9ee6 !important;
  --color-calendar-graph-day-L3-bg: #f2cdcd !important;
@@ -24,108 +25,39 @@
  --color-calendar-graph-day-L5-bg: #eebebe !important;
 }
 
-/*
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#292F33" d="M3.651 29.852L29.926 3.576c.391-.391 2.888 2.107 2.497 2.497L6.148 32.349c-.39.391-2.888-2.107-2.497-2.497z"/>
-            <path fill="#66757F" d="M30.442 4.051L4.146 30.347l.883.883L31.325 4.934z"/>
-            <path fill="#E1E8ED" d="M34.546 2.537l-.412-.412-.671-.671c-.075-.075-.165-.123-.255-.169-.376-.194-.844-.146-1.159.169l-2.102 2.102.495.495.883.883 1.119 1.119 2.102-2.102c.391-.391.391-1.024 0-1.414zM5.029 31.23l-.883-.883-.495-.495-2.209 2.208c-.315.315-.363.783-.169 1.159.046.09.094.18.169.255l.671.671.412.412c.391.391 1.024.391 1.414 0l2.208-2.208-1.118-1.119z"/>
-            <path fill="#F5F8FA" d="M31.325 4.934l2.809-2.809-.671-.671c-.075-.075-.165-.123-.255-.169l-2.767 2.767.884.882zM4.146 30.347L1.273 33.22c.046.09.094.18.169.255l.671.671 2.916-2.916-.883-.883z"/>
-            <path d="M28.897 14.913l1.542-.571.6-2.2c.079-.29.343-.491.644-.491.3 0 .564.201.643.491l.6 2.2 1.542.571c.262.096.435.346.435.625s-.173.529-.435.625l-1.534.568-.605 2.415c-.074.296-.341.505-.646.505-.306 0-.573-.209-.647-.505l-.605-2.415-1.534-.568c-.262-.096-.435-.346-.435-.625 0-.278.173-.528.435-.625M11.961 5.285l2.61-.966.966-2.61c.16-.433.573-.72 1.035-.72.461 0 .874.287 1.035.72l.966 2.61 2.609.966c.434.161.721.573.721 1.035 0 .462-.287.874-.721 1.035l-2.609.966-.966 2.61c-.161.433-.574.72-1.035.72-.462 0-.875-.287-1.035-.72l-.966-2.61-2.61-.966c-.433-.161-.72-.573-.72-1.035.001-.462.288-.874.72-1.035M24.13 20.772l1.383-.512.512-1.382c.085-.229.304-.381.548-.381.244 0 .463.152.548.381l.512 1.382 1.382.512c.23.085.382.304.382.548 0 .245-.152.463-.382.548l-1.382.512-.512 1.382c-.085.229-.304.381-.548.381-.245 0-.463-.152-.548-.381l-.512-1.382-1.383-.512c-.229-.085-.381-.304-.381-.548 0-.245.152-.463.381-.548" fill="#FFAC33"/>
-        </svg>
-        커밋 습관 그래프 */
+/* 커밋 습관 그래프: 초록 대신 보라색 계열 */
 .plugin-habits .chart-bar rect {
- fill: var(--color-primary) !important;
- opacity: 0.95 !important;
- stroke: none !important; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 테두리 제거 */
+ fill: #b197fc !important; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 연보라색 */
+ opacity: 0.9 !important;
+ stroke: none !important;
 }
 
-/*
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#C1694F" d="M4.048 29.644c-.811-.558-1.541-4.073-.936-4.404.738-.402.686.835 2.255 2.362 1.569 1.528 6.47.913 7.708 1.326 1.363.455-6.385 2.533-9.027.716z"/>
-            <path fill="#D99E82" d="M5.367 27.603C4 22 4.655 18.919 5.433 16.861 6.8 13.24 16.699 5.169 23.8 2.637 25.678 1.967 31.62 1 35 1c.589 2.332-1.174 6.717-1.62 7.518-1.009 1.81-3.564 4.273-8.646 9.482-.252.258-5.119-.46-5.376-.191-.283.296 4.044 1.579 3.755 1.889-.738.79-1.495 1.624-2.268 2.507-.172.196-8.311-.923-8.484-.722-.232.27 7.501 1.862 7.266 2.14-.645.765-1.299 1.564-1.959 2.397-1.725 2.178-12.301 1.583-12.301 1.583z"/>
-            <path fill="#C1694F" d="M19.15 12.787c1.588.966 5.331 1.943 8.316 2.422 1.898-1.937 3.299-3.378 4.302-4.529-2.259-.49-5.742-1.3-7.487-2.087l-.816-.403-4.872 4.17.557.427z"/>
-            <path fill="#662113" d="M35.088 1.514c-.02-.179-.047-.352-.088-.514-.378 0-.792.014-1.225.036-3.438.178-8.307 1.006-9.975 1.601-.345.123-.702.27-1.059.418-.478.198-.964.416-1.459.654.356 1.481 1.126 3.144 1.807 4.013-1.703 1.323-3.317 2.704-4.836 4.115-5.655 5.248-10.021 10.872-13.005 15.242.04.174.076.344.12.524 0 0 .219.012.589.026 1.482-2.288 5.703-8.239 13.194-14.841 1.565-1.379 3.276-2.786 5.13-4.195 1.745.787 5.228 1.597 7.487 2.087.322-.369.606-.712.849-1.028.316-.412.569-.785.763-1.134.415-.746 1.969-4.594 1.708-7.004z"/>
-            <path fill="#C1694F" d="M35 1c-.369 0-.751-.003-1.138-.008-3.915 1.874-7.509 4.194-10.772 6.73-.68-.87-1.451-2.532-1.807-4.013-1.467.708-2.987 1.575-4.484 2.539.309 1.911.852 4.377 1.455 5.589C6.827 22.441.638 34.605.553 34.776c-.124.247-.023.547.224.671.071.036.147.053.223.053.184 0 .36-.102.448-.276.119-.238 12.144-23.883 33.659-33.72-.032-.174-.066-.343-.107-.504z"/>
-        </svg>
-        그래프 제목 */
+/* 그래프 제목 */
 .plugin-habits h3 {
- color: var(--color-tertiary) !important;
+ color: var(--color-primary) !important;
  font-weight: 600 !important;
  margin-bottom: 0.6rem !important;
 }
 
-/*
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#8767AC" d="M36 1C16.118 1 1 16.118 1 36h17.042c0-9.917 8.042-17.958 17.958-17.958V1z"/>
-            <path fill="#EB2027" d="M0 35.999h3.042c0-18.189 14.734-32.935 32.917-32.957V0C16.095.023 0 16.131 0 35.999z"/>
-            <path fill="#F19020" d="M3.083 36h3C6.083 19.468 19.473 6.065 36 6.043v-3C17.817 3.065 3.083 17.811 3.083 36z"/>
-            <path fill="#FFCB4C" d="M6.083 36h3C9.083 21.125 21.13 9.065 36 9.043v-3C19.473 6.065 6.083 19.468 6.083 36z"/>
-            <path fill="#5C903F" d="M9.083 36h3c0-13.217 10.705-23.935 23.917-23.957v-3C21.13 9.065 9.083 21.125 9.083 36z"/>
-            <path fill="#226798" d="M12.083 36h3c0-11.56 9.362-20.934 20.917-20.956v-3.001C22.788 12.065 12.083 22.783 12.083 36z"/>
-        </svg>
-        언어 그래프 */
+/* 언어 그래프 */
 .plugin-languages .progress {
- background-color: #51576d !important;
- border: none !important; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 테두리 제거 */
+ background-color: #4c4f69 !important;
+ border: none !important;
 }
 .plugin-languages .progress &gt; span {
- background-color: var(--color-primary) !important;
  border: none !important;
 }
 
-/*
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#BDDDF4" d="M18 1C8.059 1 0 7.268 0 15c0 4.368 2.574 8.268 6.604 10.835C6.08 28.144 4.859 31.569 2 35c5.758-.96 9.439-3.761 11.716-6.416 1.376.262 2.805.416 4.284.416 9.941 0 18-6.268 18-14S27.941 1 18 1z"/>
-            <circle fill="#2A6797" cx="18" cy="15" r="2"/>
-            <circle fill="#2A6797" cx="26" cy="15" r="2"/>
-            <circle fill="#2A6797" cx="10" cy="15" r="2"/>
-        </svg>
-        포춘쿠키 폰트 조정 */
+/* 포춘쿠키 스타일 */
 .plugin-fortune {
  color: var(--color-secondary) !important;
  font-style: italic;
  opacity: 0.9 !important;
 }
 
-/*
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#FFAC33" d="M29 32H7c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h22c.55 0 1 .45 1 1v24c0 .55-.45 1-1 1z"/>
-            <path fill="#D99E82" d="M8 8h20v22H8z"/>
-            <path fill="#FFD983" d="M28 30H8L28 8z"/>
-            <path fill="#BBDDF5" d="M9 9h18v20H9z"/>
-            <path fill="#F5F8FA" d="M24.231 9L11.769 29H18l9-14.615V9z"/>
-            <path fill="#662113" d="M28 8H7V7h22zM8 30l-1 1V8h1z"/>
-            <path fill="#C1694F" d="M29 31H7l1-1h21zm0-24l-1 1v22h1z"/>
-            <path d="M26.294 5.31s-.163-.587-1.04-1.069c-.594-.327-1.604-.089-1.604-.089s-.323-.834-1.634-1.366C21.066 2.399 20 3 20 3c0-1-.977-2-2-2s-2 1-2 2c0 0-1.066-.601-2.016-.214-1.31.532-1.634 1.366-1.634 1.366s-1.01-.238-1.604.089c-.876.482-1.04 1.069-1.04 1.069S7.894 6 7 6h22c-.894 0-2.706-.69-2.706-.69zM7 32c.894 0 2.706.414 2.706.414s.163.352 1.04.642c.594.196 1.604.053 1.604.053s.323.5 1.634.82C14.934 34.16 16 33.8 16 33.8c0 .6.977 1.2 2 1.2s2-.6 2-1.2c0 0 1.066.36 2.016.129 1.31-.319 1.634-.82 1.634-.82s1.01.143 1.604-.053c.876-.289 1.04-.642 1.04-.642S28.106 32 29 32H7z" fill="#FFAC33"/>
-            <path d="M9.868 6.375H11c.207 0 .375-.168.375-.375 0-.317.092-.537.28-.673.551-.398 1.793-.115 2.227.029.114.038.238.018.335-.052.097-.069.156-.182.158-.301.002-.147.056-.628.625-.628.688 0 1.483.641 1.734.889l.001.001c.146.146.384.146.53 0 .144-.144.146-.376.007-.523l-.001-.001-.005-.005c-.405-.405-.347-1.037-.157-1.494.203-.495.587-.867.891-.867s.688.372.892.866c.19.457.248 1.089-.157 1.494l-.005.005-.001.001c-.14.147-.137.379.007.523.146.146.383.146.531 0v-.001c.25-.247 1.045-.888 1.733-.888.569 0 .622.481.625.625 0 .121.058.233.155.304.099.07.226.09.338.052.433-.143 1.674-.427 2.227-.029.188.136.28.356.28.673 0 .207.168.375.375.375h1.132c.207 0 .375-.168.375-.375s-.168-.375-.375-.375h-.79c-.09-.472-.341-.75-.559-.907-.718-.517-1.867-.34-2.489-.19-.156-.456-.55-.903-1.294-.903-.43 0-.852.151-1.211.342.005-.326-.062-.671-.204-1.013-.303-.732-.867-1.222-1.437-1.299-.046-.019-.096-.03-.148-.03s-.102.011-.148.031c-.57.077-1.135.567-1.438 1.299-.142.342-.208.687-.203 1.013-.36-.192-.781-.343-1.211-.343-.744 0-1.138.447-1.294.903-.623-.151-1.775-.326-2.489.19-.218.157-.469.435-.558.907h-.791c-.207 0-.375.168-.375.375s.168.375.375.375zm16.264 24.95H25c-.207 0-.405.222-.405.429-.333.283-1.708.214-2.533.076-.11-.018-.218-.007-.302.063-.084.071-.131.156-.131.267-.016.043-.163.165-.629.165-.896 0-1.823-.456-1.833-.461-.184-.091-.409-.018-.502.168-.093.186-.018.411.168.503.152.076.22.152.203.225-.052.223-.521.565-1.035.565s-.983-.343-1.035-.565c-.018-.072.051-.148.203-.225.186-.092.261-.317.168-.503-.093-.184-.318-.259-.502-.168-.009.005-.937.461-1.833.461-.466 0-.614-.122-.625-.125 0-.11-.048-.215-.133-.286-.083-.071-.194-.1-.304-.084-.823.139-2.198.208-2.563-.13 0-.207-.168-.375-.375-.375H9.868c-.207 0-.375.168-.375.375s.168.375.375.375h.848c.049.093.118.177.204.251.611.517 2.153.38 2.854.287.164.227.507.462 1.227.462.435 0 .864-.084 1.226-.187.002.015.006.029.009.044.146.619.955 1.143 1.765 1.143s1.619-.523 1.766-1.143l.009-.044c.361.103.791.187 1.226.187.72 0 1.062-.235 1.227-.462.699.094 2.243.23 2.854-.287.087-.074.155-.158.204-.251h.848c.207 0 .375-.168.375-.375s-.171-.375-.378-.375z" fill="#C1694F"/>
-        </svg>
-        배경 투명 */
 svg {
  background: transparent !important;
-}
-
-/* 필요 시 이모지 교체 (예:
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#DD2E44" d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"/>
-        </svg>
-        →
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#AA8ED6" d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"/>
-        </svg>
-        ) — 선택 사항
-.plugin-reactions span:has(&gt; svg[aria-label="heart"])::before {
- content: "
-        <svg class="twemoji" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-            <path fill="#AA8ED6" d="M35.885 11.833c0-5.45-4.418-9.868-9.867-9.868-3.308 0-6.227 1.633-8.018 4.129-1.791-2.496-4.71-4.129-8.017-4.129-5.45 0-9.868 4.417-9.868 9.868 0 .772.098 1.52.266 2.241C1.751 22.587 11.216 31.568 18 34.034c6.783-2.466 16.249-11.447 17.617-19.959.17-.721.268-1.469.268-2.242z"/>
-        </svg>
-        ";
- font-size: 1.1em;
-}
-.plugin-reactions svg[aria-label="heart"] {
- display: none !important;
-} 
-*/
-    </style>
+}</style>
     <foreignObject x="0" y="0" width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" class="items-wrapper">
             <section>
@@ -191,7 +123,7 @@ svg {
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            168 Commits
+                            169 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -236,17 +168,17 @@ svg {
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="403.9632844621154" height="8" fill="#c6a0f6"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="403.9632844621154" height="8" fill="#b197fc"/>
                     <rect mask="url(#languages-bar)" x="403.9632844621154" y="0" width="28.234960240365066" height="8" fill="#c6538c"/>
-                    <rect mask="url(#languages-bar)" x="432.19824470248045" y="0" width="27.641982559978313" height="8" fill="#ca9ee6"/>
-                    <rect mask="url(#languages-bar)" x="459.84022726245877" y="0" width="0.15977273754122803" height="8" fill="#384d54"/>
+                    <rect mask="url(#languages-bar)" x="432.19824470248045" y="0" width="27.641982559978313" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="459.84022726245877" y="0" width="0.15977273754122803" height="8" fill="#8caaee"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#c6a0f6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#b197fc" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 TypeScript
                             </div>
@@ -257,7 +189,7 @@ svg {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#ca9ee6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#f1e05a" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 JavaScript
                             </div>
@@ -281,7 +213,7 @@ svg {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#384d54" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#8caaee" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Dockerfile
                             </div>
@@ -1685,7 +1617,7 @@ svg {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #6023F8">Your fortune: Outlook good</b>
+                            <b style="color: #0893E1">Your fortune: You will meet a dark handsome stranger</b>
                         </div>
                     </section>
                 </div>
