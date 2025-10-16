@@ -134,18 +134,18 @@ rect, path, line {
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="365.7116890952225" height="8" fill="#e78284"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="365.7116890952225" height="8" fill="#ca9ee6"/>
                     <rect mask="url(#languages-bar)" x="365.7116890952225" y="0" width="43.557755235602095" height="8" fill="#ea999c"/>
-                    <rect mask="url(#languages-bar)" x="409.26944433082457" y="0" width="25.561370050719894" height="8" fill="#ef9f76"/>
-                    <rect mask="url(#languages-bar)" x="434.8308143815445" y="0" width="25.024541884816752" height="8" fill="#e5c890"/>
-                    <rect mask="url(#languages-bar)" x="459.8553562663612" y="0" width="0.14464373363874344" height="8" fill="#a6d189"/>
+                    <rect mask="url(#languages-bar)" x="409.26944433082457" y="0" width="25.561370050719894" height="8" fill="#e5c890"/>
+                    <rect mask="url(#languages-bar)" x="434.8308143815445" y="0" width="25.024541884816752" height="8" fill="#a6d189"/>
+                    <rect mask="url(#languages-bar)" x="459.8553562663612" y="0" width="0.14464373363874344" height="8" fill="#81c8be"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#e78284" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#ca9ee6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 TypeScript
                             </div>
@@ -156,7 +156,7 @@ rect, path, line {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#ef9f76" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#e5c890" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 SCSS
                             </div>
@@ -167,7 +167,7 @@ rect, path, line {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#a6d189" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#81c8be" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 Dockerfile
                             </div>
@@ -191,7 +191,7 @@ rect, path, line {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="#e5c890" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#a6d189" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 JavaScript
                             </div>
@@ -1595,7 +1595,7 @@ rect, path, line {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #2A56FB">Your fortune: Better not tell you now</b>
+                            <b style="color: #9D05DA">Your fortune: Very Bad Luck</b>
                         </div>
                     </section>
                 </div>
