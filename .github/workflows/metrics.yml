@@ -1,49 +1,63 @@
+# Visit https://github.com/lowlighter/metrics#-documentation for full reference
 name: Metrics
 on:
-  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
+  # Schedule updates (each hour)
+  schedule: [{ cron: "0 * * * *" }]
+  # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
+  push: { branches: ["master", "main"] }
 
 jobs:
-  build:
+  github-metrics:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Generate GitHub Metrics
-        uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@latest
         with:
+          # GitHub Token
           token: ${{ secrets.METRICS_TOKEN }}
+
+          # 기본 설정
           user: szeunkk
           template: classic
+          base: header, activity
+          base_hireable: yes
+          base_skip: yes
           config_timezone: Asia/Seoul
-          config_display: large
-          config_order: habits, languages, wakatime
+          config_twemoji: yes
 
-          # 🧱 기본 섹션 (헤더 제거)
-          base: ""
-
-          # 📊 커밋 습관 그래프 (2D 스타일)
+          # 📊 커밋 습관 그래프 (언어 제외)
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
+          plugin_habits_languages_limit: 0 # 커밋 습관 내 언어 통계 제거
 
-          # 💬 언어 통계 (Frappe 톤)
+          # 🌱 3D 잔디 그래프 (isocalendar)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # 💬 언어 통계 (Catppuccin Frappe 팔레트)
           plugin_languages: yes
           plugin_languages_sections: most-used
-          plugin_languages_limit: 8
+          plugin_languages_limit: 6
           plugin_languages_ignored: html, css
           plugin_languages_colors: javascript:#ca9ee6,python:#f2cdcd,typescript:#c6a0f6,java:#eebebe,go:#f4b8e4,rust:#babbf1,default:#8caaee
           plugin_languages_details: percentage
+          plugin_languages_threshold: 0%
 
-          # ⏱️ WakaTime 통계
-          plugin_wakatime: yes
-          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
-          plugin_wakatime_sections: time, languages, editors, projects
+          # 💖 반응(리액션)
+          plugin_reactions: yes
+          plugin_reactions_display: absolute
+          plugin_reactions_limit: 200
+          plugin_reactions_limit_discussions: 100
+          plugin_reactions_limit_discussions_comments: 100
+          plugin_reactions_limit_issues: 100
 
-          # 🎨 커스텀 CSS 스타일
+          # 🎨 커스텀 CSS (Catppuccin Frappe 톤)
           extras_css: |
             :root {
-              color-scheme: light;
+              color-scheme: dark;
               background-color: transparent !important;
               --color-text-primary: #c6d0f5 !important;
               --color-text-secondary: #a5adce !important;
@@ -51,46 +65,39 @@ jobs:
               --color-primary: #ca9ee6 !important;
               --color-secondary: #eebebe !important;
               --color-tertiary: #f2cdcd !important;
+
+              /* 잔디 그래프 톤 */
+              --color-calendar-graph-day-bg: #303446 !important;
+              --color-calendar-graph-day-border: #414559 !important;
+              --color-calendar-graph-day-L1-bg: #babbf1 !important;
+              --color-calendar-graph-day-L2-bg: #ca9ee6 !important;
+              --color-calendar-graph-day-L3-bg: #f2cdcd !important;
+              --color-calendar-graph-day-L4-bg: #eebebe !important;
+              --color-calendar-graph-day-L5-bg: #eebebe !important;
             }
 
-            /* 🪄 커밋 습관 그래프 세로 정렬 */
-            .plugin-habits .charts {
-              display: flex !important;
-              flex-direction: column !important;
-              align-items: flex-start !important;
-              gap: 1.6rem !important;
+            /* 🪄 커밋 습관 그래프 색상 */
+            .plugin-habits .chart-bar rect {
+              fill: var(--color-primary) !important;
+              opacity: 0.95 !important;
             }
 
-            /* 제목 스타일 */
-            .plugin-habits h3,
-            .plugin-languages h3,
-            .plugin-wakatime h3 {
-              color: var(--color-primary) !important;
+            /* 🪶 커밋 습관 제목 색상 */
+            .plugin-habits h3 {
+              color: var(--color-tertiary) !important;
               font-weight: 600 !important;
               margin-bottom: 0.6rem !important;
             }
 
-            /* 커밋 그래프 색상 */
-            .chart-bar rect {
-              fill: var(--color-tertiary) !important;
-              opacity: 0.95 !important;
-            }
-
-            /* 언어 그래프 색상 */
+            /* 🌈 언어 그래프 배경 및 색상 */
             .plugin-languages .progress {
               background-color: #51576d !important;
             }
             .plugin-languages .progress > span {
-              background-color: #ca9ee6 !important;
+              background-color: var(--color-primary) !important;
             }
 
-            /* 잔디 그래프 제거 */
-            .plugin-isocalendar,
-            .isocalendar {
-              display: none !important;
-            }
-
-            /* 배경 투명 처리 */
+            /* 배경 투명 */
             svg {
               background: transparent !important;
             }
