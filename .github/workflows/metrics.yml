@@ -145,22 +145,19 @@ jobs:
               padding: 0 !important;
             }
 
-            /* 00 05시 */
-            .chart-bars .entry:nth-child(-n+6) .bar {
+            /* 커밋 습관 내 첫 번째 그래프(시간대별 커밋)만 적용 */
+            .habits .column.chart.largeable:first-of-type .chart-bars .entry:nth-child(-n+6) .bar {
               background-color: #c6d0f5 !important;
             }
 
-            /* 06 11시 (아침) */
-            .chart-bars .entry:nth-child(n+7):nth-child(-n+12) .bar {
+            .habits .column.chart.largeable:first-of-type .chart-bars .entry:nth-child(n+7):nth-child(-n+12) .bar {
               background-color: #e5c890 !important;
             }
 
-            /* 12 17시 (점심) */
-            .chart-bars .entry:nth-child(n+13):nth-child(-n+18) .bar {
+            .habits .column.chart.largeable:first-of-type .chart-bars .entry:nth-child(n+13):nth-child(-n+18) .bar {
               background-color: #a6d189 !important;
             }
 
-            /* 18 23시 (저녁) */
-            .chart-bars .entry:nth-child(n+19):nth-child(-n+24) .bar {
+            .habits .column.chart.largeable:first-of-type .chart-bars .entry:nth-child(n+19):nth-child(-n+24) .bar {
               background-color: #8caaee !important;
             }
