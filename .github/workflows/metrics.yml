@@ -37,12 +37,7 @@ jobs:
           plugin_languages_details: percentage
 
           # 🎨 언어별 색상 (직접 지정)
-          plugin_languages_colors: |
-            TypeScript: a371f7
-            JavaScript: e6b7d2
-            CSS: dd7878
-            SCSS: f687b3
-            Dockerfile: a46ebd
+          plugin_languages_colors: 0:#e78284,1:#ea999c,2:#ef9f76,3:#e5c890,4:#a6d189,5:#81c8be
 
           # 💬 리액션
           plugin_reactions: yes
