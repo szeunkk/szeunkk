@@ -26,7 +26,6 @@ jobs:
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          plugin_habits_sections: facts, charts # ✅ Language activity 제거
           plugin_habits_languages_limit: 0
           plugin_habits_charts_type: classic
           plugin_isocalendar: yes
@@ -75,21 +74,32 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            /* 섹션 타이틀 색상 변경 */
+            /* 🟣 섹션 타이틀 색상 */
             .section > h2,
             .field > span.field-name,
             h2.field {
               color: #d6b2f0 !important;
             }
 
-            /* 커밋 습관 그래프 세로 정렬 */
+            /* 🟪 커밋 습관 그래프 세로 정렬 */
             .plugin-habits .charts {
               display: flex !important;
               flex-direction: column !important;
               gap: 1.6rem !important;
             }
 
-            /* 그래프 테두리 제거 */
+            /* 🟡 그래프 테두리 제거 */
             rect, path, line {
               stroke: none !important;
+            }
+
+            /* 🧩 커밋습관의 Language activity 숨기기 */
+            .plugin-habits svg + div,
+            .plugin-habits .languages,
+            .plugin-habits .field:has(span:contains("Language activity")) {
+              display: none !important;
+              visibility: hidden !important;
+              height: 0 !important;
+              margin: 0 !important;
+              padding: 0 !important;
             }
