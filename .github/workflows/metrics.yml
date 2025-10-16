@@ -1,59 +1,56 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 */12 * * *" }]
+  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Generate GitHub Metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          user: szeunkk
           template: classic
-          config_display: large
           config_timezone: Asia/Seoul
+          config_display: large
           config_order: habits, languages, wakatime
 
-          # 🕑 커밋 습관
+          # 🧱 기본 섹션 (헤더 제거)
+          base: ""
+
+          # 📊 커밋 습관 그래프 (2D 스타일)
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
 
-          # 💬 언어 비율
+          # 💬 언어 통계 (Frappe 톤)
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css
+          plugin_languages_colors: javascript:#ca9ee6,python:#f2cdcd,typescript:#c6a0f6,java:#eebebe,go:#f4b8e4,rust:#babbf1,default:#8caaee
           plugin_languages_details: percentage
 
-          # ⏱️ WakaTime
+          # ⏱️ WakaTime 통계
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
 
-          # 🎨 커스텀 스타일
+          # 🎨 커스텀 CSS 스타일
           extras_css: |
             :root {
               color-scheme: light;
-              background: none !important; /* 배경 투명 */
-              --color-text-primary: #4c4f69 !important;
-              --color-text-secondary: #6c6f85 !important;
-              --color-primary: #b4637a !important;
-              --color-secondary: #dc8a78 !important;
-              --color-tertiary: #ea76cb !important;
-
-              /* 3D 잔디 (Contributions) 색상 */
-              --color-calendar-graph-day-bg: transparent !important;
-              --color-calendar-graph-day-L1-bg: #f4dce3 !important;
-              --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
-              --color-calendar-graph-day-L3-bg: #d69cd2 !important;
-              --color-calendar-graph-day-L4-bg: #b983d0 !important;
-              --color-calendar-graph-day-L5-bg: #a46ebd !important;
+              background-color: transparent !important;
+              --color-text-primary: #c6d0f5 !important;
+              --color-text-secondary: #a5adce !important;
+              --color-border: #626880 !important;
+              --color-primary: #ca9ee6 !important;
+              --color-secondary: #eebebe !important;
+              --color-tertiary: #f2cdcd !important;
             }
 
             /* 🪄 커밋 습관 그래프 세로 정렬 */
@@ -61,48 +58,39 @@ jobs:
               display: flex !important;
               flex-direction: column !important;
               align-items: flex-start !important;
-              gap: 1.2rem !important;
-            }
-
-            /* 커밋 습관 내 언어 그래프 제거 */
-            .plugin-habits .chart:last-of-type {
-              display: none !important;
+              gap: 1.6rem !important;
             }
 
             /* 제목 스타일 */
-            .chart-caption, .plugin-habits h3 {
+            .plugin-habits h3,
+            .plugin-languages h3,
+            .plugin-wakatime h3 {
               color: var(--color-primary) !important;
               font-weight: 600 !important;
+              margin-bottom: 0.6rem !important;
             }
 
-            /* “6 Languages” 내부 막대 그래프 색상 변경 */
-            .plugin-languages .chart-bars .entry .bar {
-              background-color: #b983d0 !important;
+            /* 커밋 그래프 색상 */
+            .chart-bar rect {
+              fill: var(--color-tertiary) !important;
+              opacity: 0.95 !important;
             }
 
-            /* 프로그레스바 색상 */
+            /* 언어 그래프 색상 */
             .plugin-languages .progress {
-              background: #f1e5f9 !important;
+              background-color: #51576d !important;
             }
             .plugin-languages .progress > span {
-              background: #a46ebd !important;
+              background-color: #ca9ee6 !important;
             }
 
-            /* 언어명, 비율 텍스트 색상 */
-            .plugin-languages .chart-bars .entry .name,
-            .plugin-languages .chart-bars .entry .value {
-              color: var(--color-text-primary) !important;
+            /* 잔디 그래프 제거 */
+            .plugin-isocalendar,
+            .isocalendar {
+              display: none !important;
             }
 
-            /* "6 Languages" 제목 색상 */
-            .plugin-languages h2,
-            .plugin-languages strong {
-              color: var(--color-primary) !important;
-              font-weight: 600 !important;
-            }
-
-            /* 그래프 막대 색상 */
-            .chart-bar rect {
-              fill: #c67ed5 !important;
-              opacity: 0.9 !important;
+            /* 배경 투명 처리 */
+            svg {
+              background: transparent !important;
             }
