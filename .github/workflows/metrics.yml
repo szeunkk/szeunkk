@@ -14,9 +14,10 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
 
+          # ⚙️ 기본 설정
           user: szeunkk
           template: classic
-          base: "" # ✅ 프로필 제거
+          base: "" # ✅ 프로필 완전 제거
           config_timezone: Asia/Seoul
           config_twemoji: yes
           config_display: large
@@ -36,7 +37,7 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_limit: 6
           plugin_languages_ignored: html, css
-          plugin_languages_colors: github
+          plugin_languages_colors: "" # ✅ GitHub 팔레트 비활성화
           plugin_languages_details: percentage
 
           # 🎭 리액션
@@ -47,7 +48,7 @@ jobs:
           # 🔮 Fortune
           plugin_fortune: yes
 
-          # 🎨 스타일 커스터마이징 (Nerd Font 기반)
+          # 🎨 스타일 커스터마이징
           extras_css: |
             :root {
               font-family:
@@ -69,22 +70,21 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            text, tspan, div, p, span {
-              font-family:
-                'JetBrainsMono Nerd Font',
-                'FiraCode Nerd Font',
-                'Cascadia Code',
-                'Fira Code',
-                'JetBrains Mono',
-                'Menlo',
-                monospace !important;
-              font-weight: 500 !important;
+            /* 언어 그래프 커스텀 색상 */
+            .plugin-languages .progress > span[style*="typescript"] {
+              background-color: #b185db !important;
             }
-
-            h1, h2, h3 {
-              font-weight: 700 !important;
-              color: #b4637a !important;
-              letter-spacing: -0.02em !important;
+            .plugin-languages .progress > span[style*="javascript"] {
+              background-color: #caa0e5 !important;
+            }
+            .plugin-languages .progress > span[style*="python"] {
+              background-color: #d8b7eb !important;
+            }
+            .plugin-languages .progress > span[style*="go"] {
+              background-color: #e6b7d2 !important;
+            }
+            .plugin-languages .progress > span[style*="rust"] {
+              background-color: #b983d0 !important;
             }
 
             .plugin-habits .charts {
