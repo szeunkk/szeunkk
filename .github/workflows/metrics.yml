@@ -38,11 +38,11 @@ jobs:
 
           # 🎨 언어별 색상 (직접 지정)
           plugin_languages_colors: |
-            TypeScript: a371f7
-            JavaScript: e6b7d2
-            CSS: dd7878
-            SCSS: f687b3
-            Dockerfile: a46ebd
+            TypeScript: #a371f7
+            JavaScript: #e6b7d2
+            CSS: #dd7878
+            SCSS: #f687b3
+            Dockerfile: #a46ebd
 
           # 💬 리액션
           plugin_reactions: yes
