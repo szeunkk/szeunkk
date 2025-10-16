@@ -23,6 +23,13 @@
  --color-calendar-graph-day-L5-bg: #a46ebd !important;
 }
 
+/* 섹션 타이틀 색상 변경 */
+.section &gt; h2,
+.field &gt; span.field-name,
+h2.field {
+ color: #d6b2f0 !important;
+}
+
 /* 커밋 습관 그래프 세로 정렬 */
 .plugin-habits .charts {
  display: flex !important;
@@ -1314,7 +1321,7 @@ rect, path, line {
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="731.423378190445" height="8" fill="&quot;#9a7aff&quot;&#10;javascript"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="731.423378190445" height="8" fill="#3178c6"/>
                     <rect mask="url(#languages-bar)" x="731.423378190445" y="0" width="87.11551047120419" height="8" fill="#663399"/>
                     <rect mask="url(#languages-bar)" x="818.5388886616491" y="0" width="51.12274010143979" height="8" fill="#c6538c"/>
                     <rect mask="url(#languages-bar)" x="869.661628763089" y="0" width="50.049083769633505" height="8" fill="#f1e05a"/>
@@ -1325,7 +1332,7 @@ rect, path, line {
                         <div class="field language details">
                             <div class="field">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
-                                    <path fill="&quot;#9a7aff&quot;&#10;javascript" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
+                                    <path fill="#3178c6" fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8z"/>
                                 </svg>
                                 TypeScript
                             </div>
@@ -1516,7 +1523,7 @@ rect, path, line {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #7FEC11">Your fortune: Bad Luck</b>
+                            <b style="color: #BAC200">Your fortune: Average Luck</b>
                         </div>
                     </section>
                 </div>
