@@ -6,7 +6,7 @@
           height: 100vh;
           display: grid;
           place-items: center;
-          background: #eff1f5; /* latte base background */
+          background: transparent; /* 배경 제거 */
         }
 
         .text {
@@ -15,15 +15,16 @@
             blink 0.6s step-end infinite alternate;
           white-space: nowrap;
           overflow: hidden;
-          border-right: 3px solid #8839ef; /* Mauve accent */
+          border-right: 3px solid #b4637a; /* 부드러운 로즈 보라 */
           font-family: monospace;
           font-size: 4em;
           background: linear-gradient(
             90deg,
             #dc8a78 0%,
-            /* Rosewater */ #dd7878 25%,
-            /* Flamingo */ #1e66f5 55%,
-            /* Blue */ #8839ef 100% /* Mauve */
+            /* Rosewater - 따뜻한 로즈 */ #b4637a 30%,
+            /* Warm Mauve - 장미빛 */ #8839ef 65%,
+            /* Mauve - 포인트 보라 */ #ea76cb 100%
+              /* Pink - 부드러운 핑크 라스트 */
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -41,7 +42,7 @@
             border-color: transparent;
           }
           50% {
-            border-color: #8839ef; /* Mauve blink color */
+            border-color: #b4637a; /* 로즈 보라 점멸 */
           }
         }
       </style>
