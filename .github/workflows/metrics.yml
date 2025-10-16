@@ -36,7 +36,7 @@ jobs:
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
 
-          # 🎨 스타일 커스터마이징
+          # 🎨 커스텀 스타일
           extras_css: |
             :root {
               color-scheme: light;
@@ -47,11 +47,11 @@ jobs:
               --color-secondary: #dc8a78 !important;
               --color-tertiary: #ea76cb !important;
 
-              /* 3D 잔디 그래프 색상 커스터마이징 */
+              /* 3D 잔디 (Contributions) 색상 */
               --color-calendar-graph-day-bg: transparent !important;
-              --color-calendar-graph-day-L1-bg: #f2d3e3 !important;
-              --color-calendar-graph-day-L2-bg: #e0add3 !important;
-              --color-calendar-graph-day-L3-bg: #cc8fc8 !important;
+              --color-calendar-graph-day-L1-bg: #f4dce3 !important;
+              --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
+              --color-calendar-graph-day-L3-bg: #d69cd2 !important;
               --color-calendar-graph-day-L4-bg: #b983d0 !important;
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
@@ -61,25 +61,44 @@ jobs:
               display: flex !important;
               flex-direction: column !important;
               align-items: flex-start !important;
-              gap: 1.4rem !important;
+              gap: 1.2rem !important;
             }
 
-            /* 제목 색상 변경 */
+            /* 커밋 습관 내 언어 그래프 제거 */
+            .plugin-habits .chart:last-of-type {
+              display: none !important;
+            }
+
+            /* 제목 스타일 */
             .chart-caption, .plugin-habits h3 {
               color: var(--color-primary) !important;
               font-weight: 600 !important;
             }
 
-            /* 언어 그래프 색상 */
-            .plugin-languages .chart-bars > .entry > .bar {
+            /* “6 Languages” 내부 막대 그래프 색상 변경 */
+            .plugin-languages .chart-bars .entry .bar {
               background-color: #b983d0 !important;
             }
 
+            /* 프로그레스바 색상 */
             .plugin-languages .progress {
               background: #f1e5f9 !important;
             }
             .plugin-languages .progress > span {
               background: #a46ebd !important;
+            }
+
+            /* 언어명, 비율 텍스트 색상 */
+            .plugin-languages .chart-bars .entry .name,
+            .plugin-languages .chart-bars .entry .value {
+              color: var(--color-text-primary) !important;
+            }
+
+            /* "6 Languages" 제목 색상 */
+            .plugin-languages h2,
+            .plugin-languages strong {
+              color: var(--color-primary) !important;
+              font-weight: 600 !important;
             }
 
             /* 그래프 막대 색상 */
