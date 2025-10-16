@@ -1,122 +1,17 @@
-name: Metrics
-on:
-schedule: [{cron: "0 */12 * * *"}] # 12시간마다 자동 갱신
-workflow_dispatch:
-push: {branches: ["main", "master"]}
+![header](https://raw.githubusercontent.com/szeunkk/szeunkk/main/header.svg)
 
-jobs:
-github-metrics:
-runs-on: ubuntu-latest
-permissions:
-contents: write
-steps: - uses: lowlighter/metrics@latest
-with:
-token: ${{ secrets.METRICS_TOKEN }}
+## ꫀꪊꪀ𝘬ꪗꪮꪊꪀᧁ 𝘬𝓲ꪑ
 
-          # 기본 설정
-          user: szeunkk
-          template: classic
-          base: ""
-          base_hireable: yes
-          base_skip: yes
-          config_timezone: Asia/Seoul
-          config_twemoji: yes
-          config_display: large
-          config_order: languages, habits, isocalendar, reactions, fortune
+안녕하세요. 김은경입니다. 👩🏻‍💻
 
-          # 🗓️ 커밋 습관 (언어 그래프 제외)
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_languages_limit: 0 # 커밋 습관 내 언어 비활성화
-          plugin_habits_charts_type: classic
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
+### 🌱 개발 활동 요약
 
-          # 💬 사용 언어
-          plugin_languages: yes
-          plugin_languages_sections: most-used
-          plugin_languages_limit: 6
-          plugin_languages_ignored: html, css
-          plugin_languages_colors: github
-          plugin_languages_details: percentage
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/szeunkk/szeunkk/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/szeunkk/szeunkk/output/pacman-contribution-graph.svg">
+  <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/szeunkk/szeunkk/output/pacman-contribution-graph.svg">
+</picture>
 
-          # 🎭 리액션
-          plugin_reactions: yes
-          plugin_reactions_limit: 200
-          plugin_reactions_limit_discussions: 100
-          plugin_reactions_limit_discussions_comments: 100
-          plugin_reactions_limit_issues: 100
-          plugin_reactions_display: absolute
-
-          # 🔮 Fortune (운세)
-          plugin_fortune: yes
-
-          # 🎨 스타일 커스터마이징
-          extras_css: |
-            /* Pretendard Rounded 폰트 불러오기 */
-            @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-rounded.css');
-
-            :root {
-              font-family: 'Pretendard Rounded', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif !important;
-              color-scheme: light;
-              background-color: transparent !important;
-              --color-text-primary: #4c4f69 !important;
-              --color-text-secondary: #6c6f85 !important;
-              --color-border: transparent !important;
-              --color-calendar-graph-day-bg: #f9f5f2 !important;
-              --color-calendar-graph-day-L1-bg: #f4dce3 !important;
-              --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
-              --color-calendar-graph-day-L3-bg: #d69cd2 !important;
-              --color-calendar-graph-day-L4-bg: #b983d0 !important;
-              --color-calendar-graph-day-L5-bg: #a46ebd !important;
-              --color-primary: #b4637a !important;
-              --color-secondary: #dc8a78 !important;
-              --color-tertiary: #ea76cb !important;
-            }
-
-            text, tspan, div, p, span {
-              font-family: 'Pretendard Rounded', 'Pretendard', 'Noto Sans KR', sans-serif !important;
-            }
-
-            /* 제목 스타일 */
-            h1, h2, h3 {
-              font-weight: 600 !important;
-              color: var(--color-primary) !important;
-              letter-spacing: -0.01em !important;
-            }
-
-            /* 커밋 습관 그래프 세로 정렬 */
-            .plugin-habits .charts {
-              display: flex !important;
-              flex-direction: column !important;
-              align-items: flex-start !important;
-              gap: 1.6rem !important;
-            }
-
-            /* 그래프 막대 색상 */
-            .chart-bar rect {
-              fill: var(--color-tertiary) !important;
-              opacity: 0.9 !important;
-              stroke: none !important;
-            }
-
-            /* 언어 그래프 색상 (보라 톤 조화) */
-            .plugin-languages .progress {
-              background-color: #f1e5f9 !important;
-              border: none !important;
-            }
-            .plugin-languages .progress > span:nth-child(1) {
-              background-color: #b185db !important; /* TypeScript */
-            }
-            .plugin-languages .progress > span:nth-child(2) {
-              background-color: #caa0e5 !important; /* JavaScript */
-            }
-            .plugin-languages .progress > span:nth-child(3) {
-              background-color: #d8b7eb !important; /* SCSS 등 */
-            }
-
-            /* 불필요한 테두리 제거 */
-            rect, path, line {
-              stroke: none !important;
-            }
+<p align="center">
+  <img src="https://github.com/szeunkk/szeunkk/blob/main/github-metrics.svg" style="width:85%;max-width:900px;" alt="GitHub Metrics">
+</p>
