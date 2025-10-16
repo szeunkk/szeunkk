@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
+  schedule: [{ cron: "0 */12 * * *" }]
   workflow_dispatch:
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: "" # 프로필 헤더, 활동, 커뮤니티 제거
+          base: "" # 헤더, 활동, 커뮤니티 제거
 
           # 🕑 한국 시간대
           config_timezone: Asia/Seoul
@@ -23,9 +23,8 @@ jobs:
           plugin_habits_charts_type: circular
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
-          plugin_isocalendar_levels: 5
 
-          # 💬 사용 언어 비율
+          # 💬 사용 언어 비율 (pastel)
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
@@ -38,21 +37,29 @@ jobs:
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
 
-          # 🎨 시각 스타일
-          theme: catppuccin-latte
+          # 🎨 시각 스타일 (밝은 라떼 감성 + 보라톤 잔디)
+          template: classic
           config_display: large
           config_order: habits, languages, wakatime
-
-          # 🌸 라떼 감성 보라톤 잔디 색상 커스터마이징
           extras_css: |
             :root {
-              --color-calendar-graph-day-bg: #f9f5f2;          /* 배경 (라떼 크림) */
-              --color-calendar-graph-day-L1-bg: #f4dce3;       /* 연핑크 */
-              --color-calendar-graph-day-L2-bg: #e6b7d2;       /* 라일락 */
-              --color-calendar-graph-day-L3-bg: #d69cd2;       /* 연보라 */
-              --color-calendar-graph-day-L4-bg: #b983d0;       /* 진보라 */
-              --color-calendar-graph-day-L5-bg: #a46ebd;       /* 포인트 보라 */
-              --color-text-primary: #4c4f69;                   /* 기본 글자색 */
-              --color-text-secondary: #6c6f85;                 /* 부드러운 회색 텍스트 */
-              --color-bg-primary: transparent;                 /* 배경 투명 */
+              /* 배경 및 텍스트 */
+              --color-background: #fff9f4;
+              --color-border: #f2e9e1;
+              --color-text-primary: #4c4f69;
+              --color-text-secondary: #6c6f85;
+              --color-title: #5c5f77;
+
+              /* 잔디 그래프 색상 */
+              --color-calendar-graph-day-bg: #f9f5f2;
+              --color-calendar-graph-day-L1-bg: #f4dce3;
+              --color-calendar-graph-day-L2-bg: #e6b7d2;
+              --color-calendar-graph-day-L3-bg: #d69cd2;
+              --color-calendar-graph-day-L4-bg: #b983d0;
+              --color-calendar-graph-day-L5-bg: #a46ebd;
+
+              /* 포인트 컬러 */
+              --color-primary: #b4637a;
+              --color-secondary: #dc8a78;
+              --color-tertiary: #ea76cb;
             }
