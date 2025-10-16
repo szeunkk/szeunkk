@@ -81,6 +81,23 @@ jobs:
               --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
+            section {
+              margin-bottom: 25px; /* 섹션 사이 여백 */
+            }
+
+            h2.field {
+              margin-bottom: 12px; /* 섹션 제목과 내용 사이 */
+            }
+
+            h3.field {
+              margin-top: 10px;    /* 소제목 위쪽 여백 */
+              margin-bottom: 8px;  /* 소제목 아래쪽 여백 */
+            }
+
+            .column {
+              padding-bottom: 10px; /* 내부 칼럼 간 여백 */
+            }
+
             /* 💜 섹션 타이틀 색상 */
             .section > h2,
             h2.field,
