@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
+  schedule: [{ cron: "0 */12 * * *" }]
   workflow_dispatch:
 
 jobs:
@@ -11,87 +11,79 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: "" # 프로필 헤더, 커뮤니티, 활동 제거
+          base: ""
           template: classic
           config_display: large
           config_timezone: Asia/Seoul
           config_order: habits, languages, wakatime
 
-          # 🗓️ 커밋 습관 & 시간대 분석
+          # 🕑 커밋 습관
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
-          # 💬 사용 언어 비율
+          # 💬 언어 비율
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css
-          plugin_languages_colors: pastel
           plugin_languages_details: percentage
 
-          # ⏱️ WakaTime 통계
+          # ⏱️ WakaTime
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
 
-          # 🎨 밝고 따뜻한 보라톤 테마 + 세로 그래프
+          # 🎨 스타일 커스터마이징
           extras_css: |
             :root {
               color-scheme: light;
-              background-color: #fffaf5 !important;
+              background: none !important; /* 배경 투명 */
               --color-text-primary: #4c4f69 !important;
               --color-text-secondary: #6c6f85 !important;
-              --color-border: #e6dfd6 !important;
-              --color-calendar-graph-day-bg: #f9f5f2 !important;
-              --color-calendar-graph-day-L1-bg: #f4dce3 !important;
-              --color-calendar-graph-day-L2-bg: #e6b7d2 !important;
-              --color-calendar-graph-day-L3-bg: #d69cd2 !important;
-              --color-calendar-graph-day-L4-bg: #b983d0 !important;
-              --color-calendar-graph-day-L5-bg: #a46ebd !important;
               --color-primary: #b4637a !important;
               --color-secondary: #dc8a78 !important;
               --color-tertiary: #ea76cb !important;
+
+              /* 3D 잔디 그래프 색상 커스터마이징 */
+              --color-calendar-graph-day-bg: transparent !important;
+              --color-calendar-graph-day-L1-bg: #f2d3e3 !important;
+              --color-calendar-graph-day-L2-bg: #e0add3 !important;
+              --color-calendar-graph-day-L3-bg: #cc8fc8 !important;
+              --color-calendar-graph-day-L4-bg: #b983d0 !important;
+              --color-calendar-graph-day-L5-bg: #a46ebd !important;
             }
 
-            /* 🪄 커밋 습관 그래프를 세로 정렬로 */
+            /* 🪄 커밋 습관 그래프 세로 정렬 */
             .plugin-habits .charts {
               display: flex !important;
               flex-direction: column !important;
               align-items: flex-start !important;
-              gap: 1.6rem !important;
+              gap: 1.4rem !important;
             }
 
-            /* 그래프 전체 폭을 꽉 채움 */
-            .plugin-habits .chart {
-              width: 100% !important;
-            }
-
-            /* 제목 색상 & 여백 조정 */
-            .plugin-habits h3 {
-              margin-bottom: 0.6rem !important;
+            /* 제목 색상 변경 */
+            .chart-caption, .plugin-habits h3 {
               color: var(--color-primary) !important;
               font-weight: 600 !important;
             }
 
-            /* 작은 텍스트 (예: commit streak 등) 색상 조정 */
-            .plugin-habits small,
-            .plugin-habits p {
-              color: var(--color-text-secondary) !important;
+            /* 언어 그래프 색상 */
+            .plugin-languages .chart-bars > .entry > .bar {
+              background-color: #b983d0 !important;
             }
 
-            /* 그래프 막대 색감 조화 */
-            .chart-bar rect {
-              fill: var(--color-tertiary) !important;
-              opacity: 0.9 !important;
-            }
-
-            /* 언어 비율 그래프도 동일 톤 적용 */
             .plugin-languages .progress {
-              background-color: #f1e5f9 !important;
+              background: #f1e5f9 !important;
             }
             .plugin-languages .progress > span {
-              background-color: #b983d0 !important;
+              background: #a46ebd !important;
+            }
+
+            /* 그래프 막대 색상 */
+            .chart-bar rect {
+              fill: #c67ed5 !important;
+              opacity: 0.9 !important;
             }
