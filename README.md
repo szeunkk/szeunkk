@@ -13,5 +13,5 @@
 </picture>
 
 <p align="center">
-  <img src="https://github.com/szeunkk/szeunkk/blob/main/github-metrics.svg" style="width:85%;" alt="GitHub Metrics">
+  <img src="https://github.com/szeunkk/szeunkk/blob/main/github-metrics.svg" style="width:85%;max-width:900px;" alt="GitHub Metrics">
 </p>

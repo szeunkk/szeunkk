@@ -1,6 +1,6 @@
 name: Metrics
 on:
-  schedule: [{ cron: "0 */12 * * *" }]
+  schedule: [{ cron: "0 */12 * * *" }] # 12시간마다 자동 갱신
   workflow_dispatch:
 
 jobs:
@@ -11,29 +11,36 @@ jobs:
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
+          base: "" # 헤더, 활동, 커뮤니티 제거
 
           # 🕑 한국 시간대
           config_timezone: Asia/Seoul
 
-          # 🗓️ 커밋 습관 & 시간대 분석
+          # 🗓️ 커밋 습관 & 시간대 분석 (원형 그래프)
           plugin_habits: yes
           plugin_habits_facts: yes
           plugin_habits_charts: yes
+          plugin_habits_charts_type: circular # 원형 그래프 스타일
           plugin_isocalendar: yes
+          plugin_isocalendar_duration: quarter-year # 3개월치만 표시
+          plugin_isocalendar_colors: "#b4637a,#dc8a78,#ea76cb,#8839ef" # 따뜻한 보라톤 잔디
 
-          # 💬 사용 언어 비율
+          # 💬 사용 언어 비율 (파스텔톤 도넛)
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_ignored: html, css
+          plugin_languages_colors: pastel # 파스텔 계열 색상
+          plugin_languages_mode: detailed
 
           # ⏱️ WakaTime 통계
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
           plugin_wakatime_sections: time, languages, editors, projects
+          plugin_wakatime_languages_overview: percentage
+          plugin_wakatime_days: 7 # 최근 7일 데이터
 
-          # 🎨 밝고 미니멀 + 따뜻한 보라 계열 테마
+          # 🎨 밝고 미니멀한 Latte 스타일
           theme: catppuccin-latte
           config_display: large
           config_order: habits, languages, wakatime
