@@ -12,4 +12,6 @@
   <img alt="Pac-Man contribution graph" src="https://raw.githubusercontent.com/szeunkk/szeunkk/output/pacman-contribution-graph.svg">
 </picture>
 
-![GitHub Metrics](https://github.com/szeunkk/szeunkk/blob/main/github-metrics.svg)
+<p align="center">
+  <img src="https://github.com/szeunkk/szeunkk/blob/main/github-metrics.svg" style="width:85%;" alt="GitHub Metrics">
+</p>
