@@ -151,11 +151,11 @@ rect, path, line {
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="370.52550355392907" height="8" fill="#ca9ee6"/>
-                    <rect mask="url(#languages-bar)" x="370.52550355392907" y="0" width="56.012329150969826" height="8" fill="#ea999c"/>
-                    <rect mask="url(#languages-bar)" x="426.5378327048989" y="0" width="16.82727155687086" height="8" fill="#e5c890"/>
-                    <rect mask="url(#languages-bar)" x="443.3651042617698" y="0" width="16.539675514114318" height="8" fill="#a6d189"/>
-                    <rect mask="url(#languages-bar)" x="459.90477977588404" y="0" width="0.09522022411589334" height="8" fill="#81c8be"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="373.3088288041529" height="8" fill="#ca9ee6"/>
+                    <rect mask="url(#languages-bar)" x="373.3088288041529" y="0" width="54.27399422195267" height="8" fill="#ea999c"/>
+                    <rect mask="url(#languages-bar)" x="427.5828230261056" y="0" width="16.30177254318862" height="8" fill="#e5c890"/>
+                    <rect mask="url(#languages-bar)" x="443.8845955692942" y="0" width="16.023157839818964" height="8" fill="#a6d189"/>
+                    <rect mask="url(#languages-bar)" x="459.9077534091131" y="0" width="0.09224659088685852" height="8" fill="#81c8be"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -167,7 +167,7 @@ rect, path, line {
                                 TypeScript
                             </div>
                             <small>
-                                <div>80.55%</div>
+                                <div>81.15%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -178,7 +178,7 @@ rect, path, line {
                                 SCSS
                             </div>
                             <small>
-                                <div>3.66%</div>
+                                <div>3.54%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -202,7 +202,7 @@ rect, path, line {
                                 CSS
                             </div>
                             <small>
-                                <div>12.18%</div>
+                                <div>11.8%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -213,7 +213,7 @@ rect, path, line {
                                 JavaScript
                             </div>
                             <small>
-                                <div>3.6%</div>
+                                <div>3.48%</div>
                             </small>
                         </div>
                     </section>
@@ -1387,7 +1387,7 @@ rect, path, line {
                 <div class="row">
                     <section class="largeable-column-fields">
                         <div class="field" style="padding-left: 31px">
-                            <b style="color: #BAC200">Your fortune: Average Luck</b>
+                            <b style="color: #9D05DA">Your fortune: Very Bad Luck</b>
                         </div>
                     </section>
                 </div>
