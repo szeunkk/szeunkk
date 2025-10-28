@@ -55,7 +55,6 @@ jobs:
           plugin_habits_languages: no
           plugin_habits_from: 200 # 기본 200 이벤트 기반, 이게 안전한 값
           plugin_habits_days: 14 # 최근 2주 기준으로 분석
-          plugin_habits_languages_limit: 0 # ← "Language activity" 섹션 생성 방지
 
           # 🎨 커스텀 스타일
           extras_css: |
