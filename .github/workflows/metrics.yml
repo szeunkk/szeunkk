@@ -52,8 +52,8 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_charts_type: classic
-          plugin_habits_from: 200 # 기본 200 이벤트 기반, 이게 안전한 값
-          plugin_habits_days: 14 # 최근 2주 기준으로 분석
+          plugin_habits_from: 1000
+          plugin_habits_days: 180 # 최근 2주 기준으로 분석
 
           # 🎨 커스텀 스타일
           extras_css: |
