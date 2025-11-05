@@ -48,12 +48,7 @@ jobs:
           plugin_reactions_limit_issues: 100
 
           # 🕒 커밋 습관 (Language activity 제거)
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_from: 1000
-          plugin_habits_days: 180 # 최근 2주 기준으로 분석
+          plugin_habits: no
 
           # 🎨 커스텀 스타일
           extras_css: |
