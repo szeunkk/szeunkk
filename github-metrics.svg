@@ -25,20 +25,20 @@
 }
 
 section {
- margin-bottom: 25px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /swapfile /sys /tmp /usr /var 섹션 사이 여백 */
+ margin-bottom: 25px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 섹션 사이 여백 */
 }
 
 h2.field {
- margin-bottom: 12px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /swapfile /sys /tmp /usr /var 섹션 제목과 내용 사이 */
+ margin-bottom: 12px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 섹션 제목과 내용 사이 */
 }
 
 h3.field {
- margin-top: 10px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /swapfile /sys /tmp /usr /var 소제목 위쪽 여백 */
- margin-bottom: 8px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /swapfile /sys /tmp /usr /var 소제목 아래쪽 여백 */
+ margin-top: 10px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 소제목 위쪽 여백 */
+ margin-bottom: 8px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 소제목 아래쪽 여백 */
 }
 
 .column {
- padding-bottom: 10px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /swapfile /sys /tmp /usr /var 내부 칼럼 간 여백 */
+ padding-bottom: 10px; /bin /bin.usr-is-merged /boot /dev /etc /home /imagegeneration /lib /lib.usr-is-merged /lib32 /lib64 /lost+found /media /mnt /opt /proc /root /run /sbin /sbin.usr-is-merged /snap /srv /sys /tmp /usr /var 내부 칼럼 간 여백 */
 }
 
 /*
@@ -151,11 +151,11 @@ rect, path, line {
                         <rect x="0" y="0" width="460" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="377.3971782167056" height="8" fill="#ca9ee6"/>
-                    <rect mask="url(#languages-bar)" x="377.3971782167056" y="0" width="58.10200856906593" height="8" fill="#ea999c"/>
-                    <rect mask="url(#languages-bar)" x="435.49918678577154" y="0" width="12.245781432146732" height="8" fill="#e5c890"/>
-                    <rect mask="url(#languages-bar)" x="447.74496821791826" y="0" width="12.18607462802076" height="8" fill="#a6d189"/>
-                    <rect mask="url(#languages-bar)" x="459.931042845939" y="0" width="0.06895715406098284" height="8" fill="#81c8be"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="376.5770409882863" height="8" fill="#ca9ee6"/>
+                    <rect mask="url(#languages-bar)" x="376.5770409882863" y="0" width="64.18632620920032" height="8" fill="#ea999c"/>
+                    <rect mask="url(#languages-bar)" x="440.7633671974866" y="0" width="9.676483325497562" height="8" fill="#e5c890"/>
+                    <rect mask="url(#languages-bar)" x="450.4398505229842" y="0" width="9.50635600572542" height="8" fill="#a6d189"/>
+                    <rect mask="url(#languages-bar)" x="459.94620652870964" y="0" width="0.05379347129042057" height="8" fill="#81c8be"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -167,7 +167,7 @@ rect, path, line {
                                 TypeScript
                             </div>
                             <small>
-                                <div>82.04%</div>
+                                <div>81.86%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -178,7 +178,7 @@ rect, path, line {
                                 JavaScript
                             </div>
                             <small>
-                                <div>2.66%</div>
+                                <div>2.1%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -202,7 +202,7 @@ rect, path, line {
                                 CSS
                             </div>
                             <small>
-                                <div>12.63%</div>
+                                <div>13.95%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -213,7 +213,7 @@ rect, path, line {
                                 SCSS
                             </div>
                             <small>
-                                <div>2.65%</div>
+                                <div>2.07%</div>
                             </small>
                         </div>
                     </section>
